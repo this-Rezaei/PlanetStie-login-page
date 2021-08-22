@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    max-width: 75%;
+    height: 100%;
+}
+.backgruond-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(#e0e0e0, #ededed 35%);
+    border-radius: 35px;
+    margin-top: 30px;
+    height: 550px;
+    box-shadow: 2.5px 10px 25px #bbb;
+}
+.backgruond-img img {
+    width: 100%;
+    height: inherit;
+    border-radius: 35px 0px 0 35px;
+}
+.logo {
+    display: flex;
+    color: #00501c;
+    justify-content: center;
+    margin-top: 50px;
+    font-weight: 800;
+}
+.logo span {
+    color: black;
+    font-size: large;
+    font-weight: 600;
+}
+.form-input {
+    display: grid;
+    place-items: center;
+    margin-top: 15%;
+}
+.form-input h3 {
+    font-size: large;
+    font-weight: 600;
+    margin: 0.4rem;
+}
+.form-control input {
+    border: #bbb solid 1.9px;
+    background: transparent;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.5rem;
+    margin-top: 15px;
+    outline: none;
+    border-radius: 7px;
+}
+
+.form-control input:focus {
+    /* border-color: #00501c; */
+    outline: 0;
+    box-shadow: 0 0 7px #00501c;
+    transition: all 0.4s ease;
+}
+input :placeholder-shown {
+    color: #00501c;
+}
+input::placeholder {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+#submit {
+    border: #bbb solid 1.5px;
+    background: transparent;
+    border-radius: 7px;
+    font-size: large;
+    padding: 0.4rem 6.8rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+#submit:hover {
+    background-color: #00501c;
+    color: #fff;
+    transition: all 0.3s ease-in;
+}
+.form-control p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: red;
+}
+.form-control.success input {
+    border-color: #00501c;
+}
+.form-control.error input {
+    border-color: red;
+}
+@media only screen and (max-width: 900px) {
+    #submit {
+        font-size: 1rem;
+        padding: 0.4rem 5.6rem;
+    }
+    .form-control input {
+        font-size: 1rem;
+    }
+    input::placeholder {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .backgruond-img img {
+        filter: blur(20px);
+    }
+    .backgruond-img {
+        display: block;
+    }
+    form {
+        margin-bottom: 1000px;
+        transform: translateY(-550px);
+    }
+    .backgruond-img img {
+        border-radius: 35px;
+    }
+    input::placeholder {
+        color: black;
+    }
+    .form-control input {
+        border-color: black;
+    }
+    #submit {
+        border: none;
+        background: #00501c;
+        color: #fff;
+    }
+}
